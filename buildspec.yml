@@ -11,9 +11,9 @@ phases:
   pre_build:
     commands:
       # Build your Vue.js application
-      # - npm install 
-      # - npm run build  # Or any other build command for Vue.js
-      # - npm run serve
+      - npm install 
+      - npm run build  # Or any other build command for Vue.js
+      - npm run serve
       
   build:
     commands:
