@@ -2,20 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/share/nginx/html
-hooks:
-  BeforeInstall:
-    - location: install_dependencies.sh
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: start_server.sh
-      timeout: 300
-  ApplicationStop:
-    - location: stop_server.sh
-      timeout: 300
-      runas: root
-  ValidateService:
-    - location: validate_server.sh
-      timeout: 300
-      runas: root
+    destination: /usr/share/nginx/html/
+permissions:
+  - object: /
+    pattern: "**"
+    owner: root
+    group: root
