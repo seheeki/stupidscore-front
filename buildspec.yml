@@ -17,8 +17,8 @@ phases:
   build:
     commands:
       # Install NGINX
-      - apt-get update
-      - apt-get install -y nginx
+      - sudo yum update -y
+      - sudo amazon-linux-extras install nginx1 -y
 
       # Configure NGINX as a reverse proxy
       - echo "user nginx;
@@ -67,4 +67,4 @@ phases:
   post_build:
     commands:
       # Start NGINX
-      - service nginx start
+      - sudo systemctl enable --now nginx
