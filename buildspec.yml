@@ -12,14 +12,14 @@ phases:
     commands:
       # Build your Vue.js application
       - npm install 
-      - npm run serve  # Or any other build command for Vue.js
-
+      - npm run build  # Or any other build command for Vue.js
+      - npm run serve
+      
   build:
     commands:
       # Install NGINX
       - sudo yum update -y
       - sudo amazon-linux-extras install nginx1 -y
-
       # Configure NGINX as a reverse proxy
       - echo "user nginx;
               worker_processes auto;
