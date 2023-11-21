@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance2 = axios.create({
-	baseURL: "internal-ss-dev-was-alb-1191487428.ap-northeast-2.elb.amazonaws.com:8080",
+	baseURL: "http://ss-dev-web-alb-1102335127.ap-northeast-2.elb.amazonaws.com/api",
 });
 
 instance2.interceptors.request.use(function (config) {
