@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /stupidscore-pipeline/SourceArti/
+  - source: /dist/
     destination: /usr/share/nginx/html/
 permissions:
   - object: /
