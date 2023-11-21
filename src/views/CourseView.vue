@@ -35,7 +35,7 @@ export default {
     },
 
     async mounted() {
-        const res = await rest.get('/course');
+        const res = await rest.get('/');
         this.courses = res.data;
     },
 };
