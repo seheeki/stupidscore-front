@@ -4,7 +4,7 @@ files:
   - source: /dist/
     destination: /usr/share/nginx/html/
     overwrite: yes
-file_exists_bihavior: OVERWRITE
+file_exists_behavior: OVERWRITE
 permissions:
   - object: /
     pattern: "**"
