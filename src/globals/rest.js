@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance2 = axios.create({
-	baseURL: "http://ss-prod-web-alb-184456483.ap-northeast-2.elb.amazonaws.com/course",
+	baseURL: "https://stupidscorewas.sehee.shop:443/course",
 });
 
 instance2.interceptors.request.use(function (config) {
