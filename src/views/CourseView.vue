@@ -28,7 +28,7 @@ import rest from '@/globals/rest';
 export default {
     data() {
         return {
-            isLoggedIn: true, // 로그인 상태 여부를 저장하는 변수
+            isLoggedIn: false, // 로그인 상태 여부를 저장하는 변수
             courses: [],
             cid: null,
         };
