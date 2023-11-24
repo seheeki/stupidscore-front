@@ -3,7 +3,6 @@
         <template v-if="isLoggedIn">
             <router-link class="menu" to="/"> Stupid Score </router-link> |
             <router-link class="menu" to="/courses"> Course </router-link> |
-            <router-link class="menu" to="/reserve"> Reserve </router-link> |
             <router-link class="menu" to="/about"> About </router-link>
         </template>
 

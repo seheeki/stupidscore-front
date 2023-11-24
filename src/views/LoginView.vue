@@ -10,29 +10,14 @@
 <button :click="signUp">Login</button>
 
 <script>
-data: function () {
-  return {
-    user: {
-      userid: '',
-      password: ''
-    }
-  }
-},
-methods: {
- login: function (event) {
-    this.$http.post('/api/users/login', {
-      user: this.user
-    })
-    .then(
-      (res) => {  //로그인 성공
-        alert(res.data.message);
-      },
-      (err) => { // error 를 보여줌
-        alert('Login failed! please check your id or password');
-    })
-    .catch(err => {
-      alert(err);
-    })
-  }
-}
+export default {
+  data: function() {
+    return {
+      loginData: {
+        id: '',
+        password: ''
+      }
+    };
+  },
+};
 </script>
