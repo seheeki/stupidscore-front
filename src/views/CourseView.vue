@@ -1,7 +1,10 @@
 <template>
     <div class="background">
         <h1>Course</h1>
-
+            <div>
+                <div v-if="true">Cached</div>
+                <div v-else>Not Cached</div>
+            </div>
         <ul class="course-list">
             <li v-for="course in courses" :key="course.id" class="course-item">
                 <div class="course-box">
@@ -30,13 +33,15 @@ export default {
         return {
             isLoggedIn: false, // 로그인 상태 여부를 저장하는 변수
             courses: [],
+            isCached: null,
             cid: null,
         };
     },
 
     async mounted() {
         const res = await rest.get('/');
-        this.courses = res.data;
+        this.courses = res.data.data;
+        this.isCached = res.data.isCached;
     },
 };
 </script>
