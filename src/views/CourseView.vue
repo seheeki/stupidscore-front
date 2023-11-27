@@ -1,10 +1,6 @@
 <template>
     <div class="background">
         <h1>Course</h1>
-            <div>
-                <div v-if="true">Cached</div>
-                <div v-else>Not Cached</div>
-            </div>
         <ul class="course-list">
             <li v-for="course in courses" :key="course.id" class="course-item">
                 <div class="course-box">
@@ -15,7 +11,7 @@
                         <h2>{{ course.courseName }}</h2>
                         <p>{{ course.courseTime }} minutes </p>
                         <p>{{ course.coursePrice }} $ </p>
-                        <button @click="$router.push({name: 'course-detail', params: {courseid: `${course.courseName}`}})"> 예약 </button>
+                        <!--<button @click="$router.push({name: 'course-detail', params: {courseid: `${course.courseName}`}})"> 예약 </button>-->
                         <!--<router-link class="reserve" to="/course/course1"> Reserve </router-link>-->
                     </div>
                 </div>
