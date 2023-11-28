@@ -5,8 +5,7 @@ phases:
     runtime-versions:
       nodejs: 16  # Change the Node.js version as needed
     commands:
-      - npm install npm@latest -g 
-      # - npm install -g @vue/cli  # Install Vue CLI globally
+      - npm install -g @vue/cli  # Install Vue CLI globally
       # Add other installation commands for your project dependencies
 
   pre_build:
