@@ -1,6 +1,6 @@
 <template>
     <div class="background">
-        <h1>Stupid Score</h1>
+        <h1>Stupid Score version 2</h1>
         <div class="image-container">
             <img :src="require(`@/assets/images/golf_introduction01.jpg`)" alt="Golf Introduction" />
         </div>
