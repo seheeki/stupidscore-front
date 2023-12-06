@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16  # Change the Node.js version as needed
+    commands:
+      - npm install -g @vue/cli  # Install Vue CLI globally
+      # Add other installation commands for your project dependencies
+
+  pre_build:
+    commands:
+      # Build your Vue.js application
+      - npm install 
+      
+  build:
+    commands:
+      - npm run build 
+
+  post_build:
+    commands:
+     - echo COMPLETE - KSH
+artifacts:
+  # 빌드 환경에서 빌드 출력 결과물이 생성되는 위치를 나타냅니다.
+  # '**/*'는 모든 파일을 재귀적으로 나타냅니다.
+  files:
+    - appspec.yml
+    - dist/**/*

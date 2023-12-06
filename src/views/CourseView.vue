@@ -1,7 +1,6 @@
 <template>
     <div class="background">
         <h1>Course</h1>
-
         <ul class="course-list">
             <li v-for="course in courses" :key="course.id" class="course-item">
                 <div class="course-box">
@@ -12,7 +11,7 @@
                         <h2>{{ course.courseName }}</h2>
                         <p>{{ course.courseTime }} minutes </p>
                         <p>{{ course.coursePrice }} $ </p>
-                        <button @click="$router.push({name: 'course-detail', params: {courseid: `${course.courseName}`}})"> 예약 </button>
+                        <!--<button @click="$router.push({name: 'course-detail', params: {courseid: `${course.courseName}`}})"> 예약 </button>-->
                         <!--<router-link class="reserve" to="/course/course1"> Reserve </router-link>-->
                     </div>
                 </div>
@@ -28,15 +27,17 @@ import rest from '@/globals/rest';
 export default {
     data() {
         return {
-            isLoggedIn: true, // 로그인 상태 여부를 저장하는 변수
+            isLoggedIn: false, // 로그인 상태 여부를 저장하는 변수
             courses: [],
+            isCached: null,
             cid: null,
         };
     },
 
     async mounted() {
-        const res = await rest.get('/course');
-        this.courses = res.data;
+        const res = await rest.get('/');
+        this.courses = res.data.data;
+        this.isCached = res.data.isCached;
     },
 };
 </script>

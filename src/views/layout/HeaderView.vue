@@ -2,15 +2,13 @@
     <div id="nav" class="header nanumbarungothic">
         <template v-if="isLoggedIn">
             <router-link class="menu" to="/"> Stupid Score </router-link> |
-            <router-link class="menu" to="/course"> Course </router-link> |
-            <router-link class="menu" to="/reserve"> Reserve </router-link> |
-            <router-link class="menu" to="/about"> About </router-link>
+            <router-link class="menu" to="/courses"> Course </router-link> |
         </template>
 
         <template v-else>
             <router-link class="menu" to="/"> Home </router-link> |
             <router-link class="menu" to="/login"> Login </router-link> |
-            <router-link class="menu" to="/course"> Course </router-link> |
+            <router-link class="menu" to="/courses"> Course </router-link> |
             <router-link class="menu" to="/about"> About </router-link>
         </template>
     </div>
